@@ -13,10 +13,13 @@ __scheme = os.environ.get('API_SCHEME', 'http')
 __api_map = {}
 
 
-def __update():
+def __update(force=False):
     global __api_map
-    __api_map = __handshake__()
-
+    if __api_map == {}:
+        __api_map = __handshake__()
+    else:
+        if force:
+            __api_map = __handshake__()
 
 __update()
 
