@@ -8,4 +8,7 @@ setup(name='communications',
       author_email='ahmed.magdy40@gmail.com',
       license='MIT',
       packages=['communications'],
-      zip_safe=False)
+      zip_safe=False,
+      install_requires=[
+          'requests==2.18.4',
+      ],)
